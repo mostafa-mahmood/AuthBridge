@@ -1,0 +1,41 @@
+{
+	"name": "authbridge",
+	"version": "1.0.0",
+	"description": "Drop-in API gateway that handles authentication & authorization on your behalf",
+	"homepage": "https://github.com/mostafa-mahmood/AuthBridge#readme",
+	"bugs": {
+		"url": "https://github.com/mostafa-mahmood/AuthBridge/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mostafa-mahmood/AuthBridge.git"
+	},
+	"license": "ISC",
+	"author": "mostafa-mahmood",
+	"type": "module",
+	"main": "dist/server.js",
+	"scripts": {
+		"build": "tsc",
+		"start": "",
+		"start:dev": "",
+		"test": "jest",
+		"format": "prettier --write ."
+	},
+	"devDependencies": {
+		"@types/express": "^5.0.3",
+		"@types/jest": "^30.0.0",
+		"@types/node": "^24.1.0",
+		"jest": "^30.0.5",
+		"pino-prettier": "^3.0.1-dev",
+		"prettier": "3.6.2",
+		"ts-jest": "^29.4.0",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.3"
+	},
+	"dependencies": {
+		"dotenv": "^17.2.1",
+		"express": "^5.1.0",
+		"http-proxy-middleware": "^3.0.5",
+		"pino": "^9.7.0"
+	}
+}

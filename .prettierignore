@@ -1,4 +1,3 @@
-design/logos/
 node_modules/
 dist/
-.env
+design/
