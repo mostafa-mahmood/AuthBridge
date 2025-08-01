@@ -1,18 +1,22 @@
 import pino from 'pino';
 import type { Request } from 'express';
+import 'dotenv/config';
+// ------------------------
+// Context Interfaces
+// ------------------------
 
-interface LogUser {
+export interface LogUser {
 	id?: string;
 	ip?: string;
 }
 
-interface LogRequest {
+export interface LogRequest {
 	id?: string;
 	method?: string;
 	route?: string;
 }
 
-interface LogError {
+export interface LogError {
 	message: string;
 	stack?: string;
 	domain?: string;
@@ -21,7 +25,7 @@ interface LogError {
 	[key: string]: any;
 }
 
-interface LogContext {
+export interface LogContext {
 	user?: LogUser;
 	request?: LogRequest;
 	error?: LogError;
@@ -117,7 +121,7 @@ function log(
 // Public logger API
 // ------------------------
 
-interface Logger {
+export interface Logger {
 	trace: (
 		message: string,
 		ctx?: Request | LogContext,
@@ -166,4 +170,3 @@ const logger: Logger = {
 };
 
 export default logger;
-export type { LogContext, LogUser, LogRequest, LogError };

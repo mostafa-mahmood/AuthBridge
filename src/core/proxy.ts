@@ -1,10 +1,11 @@
-import { createProxyMiddleware, Options } from 'http-proxy-middleware';
-import { Request } from 'express';
-import { config } from '../config/index.config.js';
+import { createProxyMiddleware } from 'http-proxy-middleware';
+import type { Request } from 'express';
+import type { Options } from 'http-proxy-middleware';
+import config from '../config/index.config.js';
 
 const proxyOptions: Options = {
-	target: config.targetServer,
-	changeOrigin: true,
+	target: config.core.target_server,
+	changeOrigin: config.core.change_origin,
 
 	//@ts-ignore
 	onProxyReq: (proxyReq, req: Request) => {

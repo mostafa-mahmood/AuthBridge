@@ -1,6 +1,5 @@
-import 'dotenv/config';
+import loadAllConfigs from './loader.js';
 
-export const config = {
-	port: process.env.PORT,
-	targetServer: process.env.TARGET_SERVER,
-};
+const config = loadAllConfigs();
+
+export default config;

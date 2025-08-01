@@ -16,26 +16,30 @@
 	"main": "dist/server.js",
 	"scripts": {
 		"build": "tsc",
-		"start": "",
-		"start:dev": "",
-		"test": "jest",
+		"start:prod": "",
+		"start:dev": "tsx watch src/gateway.ts",
+		"test:unit": "jest",
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
 		"@types/express": "^5.0.3",
 		"@types/jest": "^30.0.0",
+		"@types/js-yaml": "^4.0.9",
 		"@types/node": "^24.1.0",
 		"jest": "^30.0.5",
 		"pino-prettier": "^3.0.1-dev",
 		"prettier": "3.6.2",
 		"ts-jest": "^29.4.0",
-		"ts-node": "^10.9.2",
+		"tsx": "^4.20.3",
 		"typescript": "^5.8.3"
 	},
 	"dependencies": {
 		"dotenv": "^17.2.1",
 		"express": "^5.1.0",
 		"http-proxy-middleware": "^3.0.5",
+		"js-yaml": "^4.1.0",
+		"jsonwebtoken": "^9.0.2",
+		"pg": "^8.16.3",
 		"pino": "^9.7.0"
 	}
 }

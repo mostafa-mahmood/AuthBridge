@@ -1,0 +1,7 @@
+#server
+port: 3000
+host: 'localhost'
+
+#proxy
+target_server: 'http://localhost:8000'
+change_origin: ture
